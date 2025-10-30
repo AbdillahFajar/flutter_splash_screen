@@ -31,6 +31,15 @@ class SplashScreen1 extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+          SizedBox(height: 5),
+          Text(
+            textAlign: TextAlign.center,
+            "Nasi Uduk Nenek Ezra, kini hadir dalam genggaman Anda!",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.normal,
+            ),
+          )
         ],
       ),
       )
