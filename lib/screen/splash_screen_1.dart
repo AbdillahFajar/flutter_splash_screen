@@ -75,6 +75,25 @@ class SplashScreen1 extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 15),
+          //bikin button continue
+          Container(
+            child: ElevatedButton(
+              onPressed: () {
+
+              }, 
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.amber,
+                elevation: 5
+              ),
+              child: Text(
+                "Selanjutnya",
+                style: TextStyle(
+                  color: Colors.black
+                ),
+              ) 
+            ),
           )
         ],
       ),
