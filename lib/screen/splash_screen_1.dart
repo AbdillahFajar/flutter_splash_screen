@@ -10,6 +10,7 @@ class SplashScreen1 extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Spacer(), //pake ini untuk menghilangkan space kosong di bawah children atau semua komponen dalam column, agar tidak tersisa space kosong yang mubazir
             SizedBox(height: 50),
             Container(
               width: 250,
@@ -89,6 +90,7 @@ class SplashScreen1 extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 70) //tambahkan ini untuk sedikit tambah space, biar di bawah children, gak terlalu sempit
           ],
         ),
       ),
