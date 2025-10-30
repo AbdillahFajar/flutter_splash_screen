@@ -20,9 +20,17 @@ class SplashScreen1 extends StatelessWidget {
               image: DecorationImage(
                 image: AssetImage("assets/nasduk logo.jpg"),
                 fit: BoxFit.cover
-              )
+              ),
             ),
-          )
+          ),
+          SizedBox(height: 25),
+          Text(
+              "Assalamu'alaikum...",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
         ],
       ),
       )
