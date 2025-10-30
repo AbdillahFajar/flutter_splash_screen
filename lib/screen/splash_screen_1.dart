@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class SplashScreen1 extends StatelessWidget {
+  const SplashScreen1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,11 @@ class SplashScreen extends StatelessWidget {
             height: 250,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.amber
+              color: Colors.amber,
+              image: DecorationImage(
+                image: AssetImage("assets/nasduk logo.jpg"),
+                fit: BoxFit.cover
+              )
             ),
           )
         ],
