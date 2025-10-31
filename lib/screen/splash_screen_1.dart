@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'splash_screen_2.dart';
 class SplashScreen1 extends StatelessWidget {
   const SplashScreen1({super.key});
 
@@ -19,7 +19,7 @@ class SplashScreen1 extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.amber,
                 image: DecorationImage(
-                  image: AssetImage("assets/nasduk logo.jpg"),
+                  image: AssetImage("assets/images/nasduk_logo.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -71,14 +71,20 @@ class SplashScreen1 extends StatelessWidget {
               ],
             ),
             SizedBox(height: 15),
-            //bikin button continue
-            Container(
-              margin: EdgeInsets.only(left: 40, right: 40), //gunakan ini untuk memberi jarak kanan-kiri tombol dari tepi layar (luar)
-              child: SizedBox(
+            //bikin button continue yang dibungkus dengan SizedBox
+            Container( //butuh container untuk bisa pake margin, supaya tombol bisa diberi jarak di tepi layar
+              margin: EdgeInsets.only(left: 40, right: 40), //Gunakan ini untuk memberi jarak kanan-kiri tombol dari tepi layar (luar)
+              child: SizedBox( /*Gunakan SizedBox untuk fokus ke pemberian ukuran tombol saja. Sebenernya, pake container aja tanpa SizedBox pun bisa bikin height dan width untuk tombolnya, 
+                                cuma, karena dengan container, bisa bikin dekorasi kayak pewarnaan, dsb, makanaya tombolnya dibungkus sama SizedBox, supaya bisa fokus bikin ukuran aja tanpa 
+                                bikin dekorasi.*/
                 height: 40,
                 width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {},
+                child: ElevatedButton( //pake elevated button, karena ini button customizeable
+                  onPressed: () {
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute(builder: (context) => const SplashScreen2()));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.amber,
                     elevation: 5,
